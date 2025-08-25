@@ -1,0 +1,487 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fffef9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #4CAF50, #FFA500);
+  padding: 15px 50px;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.btn-order {
+  background: #fff;
+  color: #4CAF50;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-order:hover {
+  background: #FFA500;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://worldbranddesign.com/wp-content/uploads/2022/12/01.jpg') center/cover no-repeat;
+  height: 530px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: #fff;
+  position: relative;
+  margin-top: 70px; /* offset for fixed navbar */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25); /* overlay for readability */
+}
+
+.hero-content {
+  position: relative;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hero p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #f7f7f2;
+}
+
+.btn {
+  display: inline-block;
+  background: #FFA500;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #4CAF50;
+}
+
+/* Menu Highlights */
+/* 🍹 Menu Section */
+/* 🍹 Menu Section */
+.menu {
+  padding: 60px 50px;
+  text-align: center;
+  background: #fffef9;
+}
+
+.menu h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #FFA500;
+}
+
+.menu p {
+  margin-bottom: 40px;
+  color: #555;
+}
+
+/* Grid layout – exactly 3 items per row */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-items: center;
+}
+
+/* Each item */
+.menu-item {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Irregular fruit splash background */
+.circle {
+  width: 220px;
+  aspect-ratio: 1/1;
+  background: url('https://i.pinimg.com/736x/ea/fe/a2/eafea29377fba1468ba792a3ba6054d0.jpg') center/contain no-repeat;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+/* Product image inside splash – bigger, no white stroke */
+.circle img {
+  width: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2); /* only shadow for depth */
+}
+
+/* Text */
+.menu-item h3 {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4CAF50; /* fruity green */
+}
+
+.menu-item span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #FF5722; /* orange-red accent */
+}
+
+
+
+/* Banner */
+.banner {
+  background: linear-gradient(90deg, #FFA500, #4CAF50);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 0px;
+  margin: 40px auto;
+  width: 100%;
+}
+
+.banner h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.banner p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #fffde7;
+}
+
+/* ============ ABOUT (screenshot-accurate) ============ */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* center both sides */
+  gap: 60px;                 /* space between text and circles */
+  padding: 60px;
+  position: relative;
+  max-width: 1200px;         /* optional: keeps content from stretching full width */
+  margin: 0 auto;            /* centers the whole about section */
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-text h2 span {
+  color: #f39c12;
+}
+
+.about-text p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.about .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f39c12;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.about-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-stack {
+  position: relative;
+  width: 350px;   /* adjust as needed */
+  aspect-ratio: 1/1; /* ensures square container */
+}
+
+.main-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #fff; /* optional border for clean edge */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+
+.thumb {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+
+/* ============ FEEDBACK (peach band + cards) ============ */
+.feedback-section{ position:relative; padding:70px 0 50px; }
+.feedback-section::before{
+  content:""; position:absolute; left:0; right:0; top:65px; height:220px;
+  background:#fff3ea; /* light peach band */
+  z-index:0;
+}
+.feedback-lemon {
+  position: absolute;
+  left: 0px;
+  top: 20%;
+  transform: translateY(-50%);
+  width: 270px;
+  z-index: 0;
+}
+.feedback-container{ position:relative; z-index:1; width:min(900px,100%); margin:0 auto; }
+.feedback-title{
+  text-align:center; margin-top: 30px;; color:#4CAF50; font-weight:700;
+}
+.feedback-row{
+  display:grid; grid-template-columns:1fr 1fr; gap:22px;
+}
+.fb-card{
+  border-radius:10px; padding:50px;
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
+  color:#fffefe; display:flex; flex-direction:column; gap:10px;
+  margin-top: 70px;
+}
+.fb-card .fb-head {
+  display: flex;
+  flex-direction: column;
+  align-items:self-start;
+  gap: 6px;
+  margin-top: -70px; /* pull image upwards */
+}
+.fb-orange{ background:#ff8a00; }
+.fb-dark{ background:#ff8a00; }
+.fb-head{ display:flex; align-items:center; gap:12px; }
+.fb-head img{ width:48px; height:48px; border-radius:50%; border:3px solid #fff; }
+.fb-head h4{ font-size:1rem; line-height:1.2; }
+.fb-head .role{ font-size:.8rem; opacity:.85; color:#ffeedd; }
+.fb-text{ font-size:.95rem; line-height:1.45; opacity:.95; }
+
+/* ============ BRANDS row ============ */
+.brands--row{
+  padding:24px 8% 42px; display:flex; gap:26px; justify-content:center; flex-wrap:wrap;
+}
+.brands--row span{
+  font-weight:600; letter-spacing:.06em; font-size:0.95rem;
+  background:#f2f2f2; color:#333; padding:8px 14px; border-radius:6px;
+}
+
+/* ============ NEWSLETTER (full orange band) ============ */
+.newsletter-shot{
+  background:#FFA500; color:#fff; text-align:center; padding:48px 8%;
+}
+.newsletter-shot h3{ margin-bottom:16px; font-weight:600; }
+.newsletter-shot form{
+  width:min(560px,95%); margin:0 auto; display:flex; align-items:center;
+  border-radius:8px; overflow:hidden; box-shadow:0 10px 22px rgba(0,0,0,.16);
+}
+.newsletter-shot input{
+  flex:1; padding:12px 14px; border:none; outline:none; background:#fff; color:#333;
+}
+.newsletter-shot button{
+  padding:12px 20px; border:none; background:#333; color:#fff; font-weight:700;
+  cursor:pointer; transition:.25s;
+}
+.newsletter-shot button:hover{ background:#111; }
+
+/* ============ RESPONSIVE FIXES ============ */
+
+/* Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .hero {
+    height: 420px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .about-text {
+    padding-right: 0;
+  }
+
+  .image-stack {
+    width: 300px;
+    height: 300px;
+  }
+
+  .thumb {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 12px 20px;
+  }
+
+  .navbar nav {
+    margin-top: 10px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .menu {
+    padding: 40px 20px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feedback-row {
+    grid-template-columns: 1fr;
+  }
+
+  .fb-card {
+    padding: 30px 20px;
+    margin-top: 50px;
+  }
+
+  .fb-head {
+    flex-direction: row;  /* keep avatar + name side by side */
+    margin-top: -40px;
+  }
+
+  .brands--row {
+    gap: 14px;
+  }
+
+  .newsletter-shot form {
+    flex-direction: column;
+  }
+
+  .newsletter-shot input {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .newsletter-shot button {
+    width: 100%;
+    border-radius: 0 0 6px 6px;
+  }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .menu h2,
+  .banner h2,
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .image-stack {
+    width: 240px;
+    height: 240px;
+  }
+
+  .thumb {
+    width: 80px;
+    height: 80px;
+  }
+}
